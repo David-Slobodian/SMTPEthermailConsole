@@ -6,6 +6,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="appsettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AdditionalFiles>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MailKit" Version="3.3.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
   </ItemGroup>

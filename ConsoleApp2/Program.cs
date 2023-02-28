@@ -8,6 +8,7 @@ using System.IO;
 using static Org.BouncyCastle.Math.EC.ECCurve;
 using Microsoft.Extensions.Configuration.Json;
 using Microsoft.Extensions.Configuration;
+using Org.BouncyCastle.Asn1.X500;
 
 namespace ConsoleApp2
 {
@@ -16,7 +17,7 @@ namespace ConsoleApp2
         static void Main(string[] args)
         {
             var builder = new ConfigurationBuilder()
-               .SetBasePath(Directory.GetCurrentDirectory())
+                .SetBasePath(Directory.GetCurrentDirectory())
                .AddJsonFile("appsettings.json");
 
             var configuration = builder.Build();
